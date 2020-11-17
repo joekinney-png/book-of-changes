@@ -10,8 +10,11 @@ module.exports = {
   devServer: {
     host: "localhost",
     port: 8080,
-    publicPath: "/build/",
-    hot: true,
+    publicPath: "/build",
+    contentBase: "./public",
+    proxy: {
+      "/": "http://localhost:3000",
+    },
   },
   module: {
     rules: [
