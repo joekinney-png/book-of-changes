@@ -32,12 +32,25 @@ completed
 3. basic serve which serves an index.html page to the local port
 4. set up ESLint and Prettier, installed React, React DOM
 5. create and configure webpack file, download babel
-6. downloaded postgresql
-7. 
+6. downloaded postgresql, configured SQL and added first table to record readings
+7. set up stylesheets with webpack, connected to React and HTML
+8. set up functionality to send a post request to add new readings to the server (body-parser)
+9. 
 
 //
 
 optional
 
-1. new database instance at elephant sql
-2. 
+1. 
+
+//
+
+SQL queries
+
+CREATE TABLE Reading (_id INT NOT NULL UNIQUE, FirstName VARCHAR(20), LastName VARCHAR(40), Question TEXT, Starred INT, Toss INT, Notes TEXT)
+
+INSERT INTO Reading (_id, FirstName, LastName, Question, Starred, Toss, Notes) VALUES ('1', 'Winston', 'LaMoine', 'What is the energetic outcome of building a digital version of the I Ching?', '1', '678978', 'tbd')
+
+SELECT * FROM reading
+
+DROP TABLE Reading
