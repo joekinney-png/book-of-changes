@@ -6,9 +6,7 @@
  </head>
  <body>
      <h1>Book of Changes</h1>
-     <div id="Book"></div>
-     <script src="build/bundle.js"></script>
-     Record a new reading:
+     <h4>Record a new reading:</h4>
      <form id="readingInfo" method="POST" action='/api/add'>
        <input name="_id" type="number" placeholder="ID"></input>
        <input name="firstName" type="string" placeholder="First name"></input>
@@ -19,8 +17,11 @@
        <input name="notes" type="string" placeholder="Notes"></input>
        <input type='submit' value="Submit">
      </form>
-     <button method="POST" action='/api/view'>View past readings</button>
-     <script src='index.js'></script>
-     <div id="Readings"></div>
+     <div id="content"></div>
+     <script src='Book.jsx'></script>
+     <script src="build/bundle.js"></script>
  </body>
 </html>
+
+<!-- <button method="POST" action='/api/view'>View past readings</button>
+<div id="Readings"></div> -->

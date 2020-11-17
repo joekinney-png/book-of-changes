@@ -30,6 +30,8 @@ readingLogController.addReading = (req, res, next) => {
 readingLogController.viewReadings = (req, res, next) => {
   const text = `SELECT * FROM reading`;
 
+  console.log('button clicked')
+
   db.query(text)
     .then((data) => {
       res.locals.readings = data.rows;

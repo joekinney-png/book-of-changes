@@ -12,14 +12,15 @@ this open source book-of-changes application allows registered users to quickly 
 core features:
  - webpack 
  - react frontend user interface
- - cookies/session authentication
- - mongodb database storage
- - algorithms to generate hexagrams (yarrow algorithm)
+ - SQL database storage
  
 stretch goals:
+ - cookies/session authentication
+ - algorithms to generate hexagrams (yarrow algorithm)
  - enhanced UI and styling
+
+ extra stretch goals:
  - OAuth authorization
- - SQL database to store past readings, hexagrams, etc
  - chrome extension for quick reading w/o storage
  - incorporate advanced data structures
 
@@ -35,7 +36,8 @@ completed
 6. downloaded postgresql, configured SQL and added first table to record readings
 7. set up stylesheets with webpack, connected to React and HTML
 8. set up functionality to send a post request to add new readings to the server (body-parser)
-9. 
+9. include ability to get data from the database by clicking button on front end
+10. set up react functionality in a single file to print the log of past readings
 
 //
 
