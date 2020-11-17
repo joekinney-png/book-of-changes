@@ -1,0 +1,58 @@
+{
+  "name": "book-of-changes",
+  "version": "1.0.0",
+  "description": "consult the oracle digitally without having to cast physical stalks or to flip coins; save you questions and the responses",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "export NODE_ENV=production; webpack",
+    "dev": "export NODE_ENV=development; node server/server.js; webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joekinney-png/book-of-changes.git"
+  },
+  "keywords": [],
+  "author": "Winston LaMoine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joekinney-png/book-of-changes/issues"
+  },
+  "homepage": "https://github.com/joekinney-png/book-of-changes#readme",
+  "dependencies": {
+    "browserify": "^10.2.4",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "express": "^4.17.1",
+    "gulp": "^3.9.0",
+    "path": "^0.12.7",
+    "postgresql": "0.0.1",
+    "prettier": "^2.1.2",
+    "prop-types": "^15.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^4.29.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.2.1",
+    "concurrently": "^4.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "isomorphic-fetch": "^3.0.0",
+    "nodemon": "^2.0.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

@@ -22,3 +22,22 @@ stretch goals:
  - SQL database to store past readings, hexagrams, etc
  - chrome extension for quick reading w/o storage
  - incorporate advanced data structures
+
+//
+
+completed
+
+1. first draft of README
+2. created build, client, server and docs files
+3. basic serve which serves an index.html page to the local port
+4. set up ESLint and Prettier, installed React, React DOM
+5. create and configure webpack file, download babel
+6. downloaded postgresql
+7. 
+
+//
+
+optional
+
+1. new database instance at elephant sql
+2. 
