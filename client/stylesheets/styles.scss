@@ -15,14 +15,15 @@ h1 {
 .question {
   font-weight: bold;
   border: hidden;
-  box-shadow: 0px 0px 25px 1px rgba(35, 23, 65, 0.2);
+  box-shadow: 0px 0px 25px 2px rgba(35, 23, 65, 0.2);
   margin: 0px 0px 50px 0px;
   padding: 5px;
-  font-size: 115%;
+  font-size: 150%;
+  color: rgb(102, 19, 102);
 }
 
 h3 {
-  color: rgb(94, 13, 94);
+  color: rgb(102, 19, 102);
   text-align: center;
 }
 
@@ -102,10 +103,12 @@ button {
 }
 
 .result {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
   margin: 0px 0px 25px 0px;
-  padding: 10px;
+  padding: 0px;
+  column-gap: 20px;
 }
 
 .newNotes {
@@ -113,4 +116,19 @@ button {
   flex-direction: row;
   padding: 5px;
   font-size: 85%;
+}
+
+.hexDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 85%;
+}
+
+.linesDisplay {
+
+}
+
+.actualHex {
+  font-size: 1000%;
 }

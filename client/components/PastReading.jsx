@@ -31,16 +31,29 @@ class PastReading extends Component {
             <span>{this.props.question}</span>
             </p>
             <div className="result">
-              <span>Present Hexagram: {this.props.presenthexdef} {this.props.presenthex} {this.props.presenthexdescrip}</span>
-              <span></span>
-              <span>Changing Lines: {this.props.changinglinesstr}</span>
-              <span></span>
-              <span>Future Hexagram: {this.props.futurehexdef} {this.props.futurehex} {this.props.futurehexdescrip}</span>
+                  <div><u>Present Hexagram:</u></div>
+                  <div><u>Changing Lines:</u></div>
+                  <div><u>Future Hexagram:</u></div>
+            </div>
+            <div className="result">
+              <div className="hexDisplay">
+                  <div>{this.props.presenthexdef}</div>
+                  <div className="actualHex">{this.props.presenthex}</div>
+                  <div>{this.props.presenthexdescrip}</div>
+              </div>
+              <div className="linesDisplay">
+                  {this.props.changinglinesstr}
+              </div>
+              <div className="hexDisplay">
+                  <div>{this.props.futurehexdef}</div>
+                  <div className="actualHex">{this.props.futurehex}</div>
+                  <div>{this.props.futurehexdescrip}</div>
+              </div>
             </div>
           </div>
           <p className="thoughts">
             <form id="notesForm" method="PUT" action='/api/put'>
-             <div>Notes: {this.props.thoughts}</div>
+             <div>Thoughts: {this.props.thoughts}</div>
              <br/>
              <input name={this.props.id} type="string" placeholder="Enter notes here" style={{ width: "500px" }}></input>
              <input type='submit' value="Submit"></input>
