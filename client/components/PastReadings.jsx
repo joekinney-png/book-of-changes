@@ -43,7 +43,7 @@ class PastReadings extends Component {
       return (
         <div>
            <h3>
-            View past readings in this section:
+            View past readings here:
           </h3>
           <div id="pastReadings">
             <button
