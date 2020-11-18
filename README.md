@@ -50,7 +50,9 @@ completed
 11. modularized my react code to generate the sections with past readings
 12. implemented the ability to delete and refresh the UI upon deleting
 13. made improvements to the UI, especially with respect to the historical log
-14. 
+14. made id generation automatic, fixed the delete so that it would still render
+15. added png image processing to the webpack
+16. 
 
 //
 

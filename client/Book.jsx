@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PastReadings from './components/PastReadings.jsx';
 import './stylesheets/styles.scss';
+import img from './imgs/ichinghexagrams.png';
 
 class Book extends Component {
   constructor(props, context) {
@@ -13,6 +14,7 @@ class Book extends Component {
   render() {
     return(
       <div>
+        <img src={img} className='iching'/>
         <PastReadings/>
       </div>
     );

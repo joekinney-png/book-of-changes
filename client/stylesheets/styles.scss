@@ -1,7 +1,15 @@
 h1 {
   color: rgb(65, 8, 65);
   text-align: center;
-  margin: 0px 0px 100px 0px;
+  margin: 50px 0px 75px 0px;
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1;
+  background-color: rgb(196, 196, 247);
+}
+
+.iching {
+  margin: 0px 0px 75px 0px;
 }
 
 h3 {
@@ -16,7 +24,7 @@ body {
 
 form {
   display: inline-block;
-  margin: 20px 20px 70px 20px;
+  margin: 20px 20px 75px 20px;
 }
 
 #pastReadings {
@@ -28,6 +36,7 @@ form {
   // flex-wrap: wrap;
   // justify-content: center;
   display: inline-block;
+  margin: 0px 20px 75px 20px;
 }
 
 .pastReading {
@@ -38,7 +47,7 @@ form {
   margin: 5%;
   padding: 10px;
   width:95%;
-  margin: 15px auto;
+
   // box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
   border: solid .25px rgb(90, 82, 90);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
