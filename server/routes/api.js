@@ -1,6 +1,7 @@
 const express = require("express");
 
 const readingLogController = require("../controllers/readingLogController");
+const hexagramController = require("../controllers/hexagramController");
 
 const router = express.Router();
 
@@ -9,6 +10,7 @@ router.get("/view", readingLogController.viewReadings, (req, res) => {
 });
 
 router.post("/add",
+  hexagramController.newPresentHexagram,
   readingLogController.pullId,
   readingLogController.addReading,
   (req, res) => {
