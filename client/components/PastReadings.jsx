@@ -41,7 +41,7 @@ class PastReadings extends Component {
                            futurehexdef={this.state.readingLog[i]['futurehexdef']}
                            futurehex={this.state.readingLog[i]['futurehex']}
                            futurehexdescrip={this.state.readingLog[i]['futurehexdescrip']}
-                          //  notes={this.state.readingLog[i]['notes']}
+                           thoughts={this.state.readingLog[i]['thoughts']}
                            viewPastReadings={this.viewPastReadings}
                         />);
       }

@@ -39,12 +39,16 @@ class PastReading extends Component {
             </div>
           </div>
           <p className="thoughts">
-            <span>Notes: [to come]</span>
+            <form id="notesForm" method="PUT" action='/api/put'>
+             <div>Notes: {this.props.thoughts}</div>
+             <br/>
+             <input name={this.props.id} type="string" placeholder="Enter notes here" style={{ width: "500px" }}></input>
+             <input type='submit' value="Submit"></input>
+            </form>
           </p>
         </div>
         <div className="updateDelete">
-            <button type="button" className="btnUpdate" >Update notes</button>
-             <button type="button" className="btnDelete" onClick={this.deleteReading}>Delete reading</button>
+            <button type="button" className="btnDelete" onClick={this.deleteReading}>Delete reading</button>
         </div>
       </div>
       )
@@ -52,5 +56,3 @@ class PastReading extends Component {
   }
 
 export default PastReading;
-
-// onClick={updateNotes}

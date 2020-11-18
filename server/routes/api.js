@@ -2,6 +2,7 @@ const express = require("express");
 
 const readingLogController = require("../controllers/readingLogController");
 const hexagramController = require("../controllers/hexagramController");
+const notesController = require("../controllers/notesController");
 
 const router = express.Router();
 
@@ -15,6 +16,10 @@ router.post("/add",
   readingLogController.addReading,
   (req, res) => {
     res.redirect("/");
+});
+
+router.get("/put", notesController.updateNote, (req, res) => {
+  res.redirect("/");
 });
 
 router.get("/delete?:id", readingLogController.deleteReading, (req, res) => {
