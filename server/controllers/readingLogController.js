@@ -35,8 +35,14 @@ readingLogController.pullId = (req, res, next) => {
 }
 
 readingLogController.addReading = (req, res, next) => {
-  console.log(res.locals.presentHexArr);
-  console.log(res.locals.presentHexStr);
+  // console.log(res.locals.presentHexObj.definition);
+  // console.log(res.locals.presentHexObj.hexagram);
+  // console.log(res.locals.presentHexObj.description);
+  const changingLineComb = res.locals.changingLineText.text.reduce((acc, curr) => (acc += curr + "\n"), '');
+  console.log(changingLineComb);
+  // console.log(res.locals.futureHexObj.definition);
+  // console.log(res.locals.futureHexObj.hexagram);
+  // console.log(res.locals.futureHexObj.description);
 
   const { firstName, lastName, question } = req.body;
   const value = [
@@ -44,15 +50,19 @@ readingLogController.addReading = (req, res, next) => {
     String(firstName),
     String(lastName),
     String(question),
-    String(res.locals.presentHexStr),
-    String(res.locals.futureHexStr),
-    String(res.locals.changingLinesStr),
+    String(res.locals.presentHexObj.definition),
+    String(res.locals.presentHexObj.hexagram),
+    String(res.locals.presentHexObj.description),
+    String(res.locals.futureHexObj.definition),
+    String(res.locals.futureHexObj.hexagram),
+    String(res.locals.futureHexObj.description),
+    String(changingLineComb),
   ];
 
   res.locals.newReading = value;
 
-  const text = `INSERT INTO reading (_id, firstName, lastName, question, presentHexStr, futureHexStr, changingLines)
-    VALUES ($1, $2, $3, $4, $5, $6, $7)`;
+  const text = `INSERT INTO reading (_id, firstName, lastName, question, presentHexDef, presentHex, presentHexDescrip, futureHexDef, futureHex, futureHexDescrip, changingLines)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`;
 
   db.query(text, value)
     .then((data) => {
