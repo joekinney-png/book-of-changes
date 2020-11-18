@@ -34,7 +34,6 @@ class PastReadings extends Component {
                            firstName={this.state.readingLog[i]['firstname']}
                            lastName={this.state.readingLog[i]['lastname']}
                            question={this.state.readingLog[i]['question']}
-                          //  starred={this.state.readingLog[i]['starred']}
                            presenthexdef={this.state.readingLog[i]['presenthexdef']}
                            presenthex={this.state.readingLog[i]['presenthex']}
                            presenthexdescrip={this.state.readingLog[i]['presenthexdescrip']}

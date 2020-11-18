@@ -18,7 +18,6 @@ router.post("/add",
 });
 
 router.get("/delete?:id", readingLogController.deleteReading, (req, res) => {
-  console.log('router working')
   res.status(200).json(res.locals.deletedReading);
 });
 

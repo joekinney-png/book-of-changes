@@ -36,29 +36,16 @@ hexagramController.newPresentHexagram = (req, res, next) => {
     if (e === 1) {
       const queryIndex = i + 1;
       const query = queryStart + queryIndex;
-      const input = queryIndex + '. ' + changingLineInfo[0][query]
+      const input = queryIndex + '. ' + changingLineInfo[0][query];
       changingLineText.text.push(input);
     }
   })
 
+  res.locals.body = req.body;
   res.locals.presentHexObj = presentHexObj;
   res.locals.changingLineText = changingLineText;
   res.locals.futureHexObj = futureHexObj;
 
-  // to remove these lines after front end properly processes the objects
-  const presentHexStr = presentHexArr.join('');
-  const futureHexStr = futureHexArr.join('');
-  const changingLinesStr = changingLines.join('');
-
-  res.locals.presentHexArr = presentHexArr;
-  res.locals.presentHexStr = presentHexStr;
-  res.locals.futureHexArr = futureHexArr;
-  res.locals.futureHexStr = futureHexStr;
-  res.locals.changingLines = changingLines;
-  res.locals.changingLinesStr = changingLinesStr;
-
-  res.locals.body = req.body;
-  
   next();
 }
 

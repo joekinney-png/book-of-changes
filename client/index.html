@@ -8,13 +8,9 @@
     <h1>I Ching: Book of Changes</h1>
     <h3>Record a new reading here:</h3>
     <form id="readingInfo" method="POST" action='/api/add'>
-      <!-- <input name="_id" type="number" placeholder="ID"></input> -->
       <input name="firstName" type="string" placeholder="First name"></input>
       <input name="lastName" type="string" placeholder="Last name"></input>
       <input name="question" type="string" placeholder="Question" style="width: 500px;"></input>
-      <!-- <input name="starred" type="number" placeholder="Star?"></input>
-      <input name="toss" type="number" placeholder="Present hexagram"></input>
-      <input name="notes" type="string" placeholder="Notes"></input> -->
       <input type='submit' value="Submit">
     </form>
     <div id="content"></div>

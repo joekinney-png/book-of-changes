@@ -25,7 +25,6 @@ class PastReading extends Component {
         <div className="pastReading">
           <p className="identification">
             <span>Reading #{this.props.id} -- {this.props.firstName} {this.props.lastName}</span>
-            {/* <span>Starred?: [to come]</span> */}
           </p>
           <div className="readingDetails">
             <p className="question">

@@ -55,7 +55,8 @@ completed
 16. added functionality to derive present hexagram, changing lines and future hexagram
 17. able to pull the relevant hexagram and changing line information and store in database
 18. calls from the client pull all of the relevant information out of the database and display on screen
-19. 
+19. cleaned up the code, deleting extra lines, etc
+20. 
 
 //
 

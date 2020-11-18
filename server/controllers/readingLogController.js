@@ -8,7 +8,6 @@ readingLogController.viewReadings = (req, res, next) => {
   db.query(text)
     .then((data) => {
       res.locals.readings = data.rows;
-      console.log(data.rows)
       next();
     })
     .catch((err) => console.log(err));
@@ -35,17 +34,9 @@ readingLogController.pullId = (req, res, next) => {
 }
 
 readingLogController.addReading = (req, res, next) => {
-  // console.log(res.locals.presentHexObj.definition);
-  // console.log(res.locals.presentHexObj.hexagram);
-  // console.log(res.locals.presentHexObj.description);
   const changingLineComb = res.locals.changingLineText.text.reduce((acc, curr) => (acc += curr + "\n"), '');
-  console.log(changingLineComb);
-  // console.log(res.locals.futureHexObj.definition);
-  // console.log(res.locals.futureHexObj.hexagram);
-  // console.log(res.locals.futureHexObj.description);
 
   const { firstName, lastName, question } = res.locals.body;
-  console.log(firstName);
   const value = [
     res.locals.id,
     String(firstName),
