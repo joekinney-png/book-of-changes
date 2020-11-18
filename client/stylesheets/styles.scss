@@ -1,13 +1,33 @@
 h1 {
   color: rgb(65, 8, 65);
+  text-align: center;
+  margin: 0px 0px 100px 0px;
 }
 
 h3 {
   color: rgb(94, 13, 94);
+  text-align: center;
 }
 
 body {
   background-color: rgb(175, 175, 241);
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+  margin: 20px 20px 70px 20px;
+}
+
+#pastReadings {
+  width: 65%;
+  // margin: 0 auto;
+  // padding: 50px 0 150px 0;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  display: inline-block;
 }
 
 .pastReading {
@@ -19,22 +39,43 @@ body {
   padding: 10px;
   width:95%;
   margin: 15px auto;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
-  border: solid 1px rgb(43, 4, 43);
+  // box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+  border: solid .25px rgb(90, 82, 90);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
   border-radius: 5px;
-  box-shadow: 5px 6px 8px 4px rgba(93, 83, 99, 0.62);
+  // box-shadow: 5px 6px 8px 4px rgba(93, 83, 99, 0.62);
 }
 
 .identification {
-  border: solid 1px rgb(99, 86, 99);
-  padding: 2em;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+  // border: solid 1px rgb(99, 86, 99);
+  // padding: 2em;
+  // // border-radius: 5px;
+  // display: flex;
+  // flex-direction: column;
+
+  display: inline-flex;
+  height: 20px;
+  // width: 250px;
+  // border: 1px solid rgb(94, 13, 94);
+  margin: 20px 20px px 20px;
+  // color: rgb(65, 8, 65);
+  // background-color: rgb(192, 192, 236);
+  // text-transform: uppercase;
+  // text-decoration: none;
+  // font-size: .8em;
+  // letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  // overflow: hidden;
+  // border-radius: 5px;
 }
 
 .readingDetails {
-
+  width: 85%;
+  // border: solid 0.5px rgb(43, 4, 43);
+  // border: solid .25px rgb(90, 82, 90);
+  margin: 20px 20px 20px 20px;
+  padding: 10px;
 }
 
 .thoughts {
@@ -44,7 +85,26 @@ body {
 .updateDelete {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: inline-flex;
+  height: 20px;
+  width: 250px;
+  // border: 1px solid rgb(94, 13, 94);
+  margin: 20px 20px 20px 20px;
+  // color: rgb(65, 8, 65);
+  // background-color: rgb(192, 192, 236);
+  // text-transform: uppercase;
+  // text-decoration: none;
+  font-size: .8em;
+  // letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  // overflow: hidden;
+  // border-radius: 5px;
 }
 
 .question {

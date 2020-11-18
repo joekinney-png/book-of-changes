@@ -33,10 +33,9 @@ class PastReadings extends Component {
                            firstName={this.state.readingLog[i]['firstname']}
                            lastName={this.state.readingLog[i]['lastname']}
                            question={this.state.readingLog[i]['question']}
-                           starred={this.state.readingLog[i]['starred']}
-                           toss={this.state.readingLog[i]['toss']}
-                           notes={this.state.readingLog[i]['notes']}
-                           deleteReading={this.deleteReading}
+                          //  starred={this.state.readingLog[i]['starred']}
+                          //  toss={this.state.readingLog[i]['toss']}
+                          //  notes={this.state.readingLog[i]['notes']}
                            viewPastReadings={this.viewPastReadings}
                         />);
       }

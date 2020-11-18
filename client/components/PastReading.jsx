@@ -15,7 +15,6 @@ class PastReading extends Component {
     .then(resp => resp.json())
     .then(data => {
       this.props.viewPastReadings();
-      console.log(data)
     })
     .catch(err => console.log(err));
   }
@@ -25,16 +24,14 @@ class PastReading extends Component {
       <div>
         <div className="pastReading">
           <p className="identification">
-            <span>Reading #: {this.props.id}</span>
-            <span>Reading Date: [to come]</span>
-            <span>{this.props.firstName} {this.props.lastName}</span>
-            <span>Starred?: [to come]</span>
-          </p>
-          <p className="question">
-            <span>Question posed: {this.props.question}</span>
+            <span>Reading #{this.props.id} -- {this.props.firstName} {this.props.lastName}</span>
+            {/* <span>Starred?: [to come]</span> */}
           </p>
           <div className="readingDetails">
-            <span>Present Hexagram: {this.props.toss}</span>
+            <p className="question">
+            <span>Question posed: {this.props.question}</span>
+            </p>
+            <span>Present Hexagram: [to come]</span>
             <br/>
             <span>Future Hexagram: [to come]</span>
           </div>

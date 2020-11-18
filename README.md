@@ -16,19 +16,22 @@ core features:
  - SQL database storage
  
 stretch goals:
- - cookies/session authentication
- - algorithms to generate hexagrams (yarrow algorithm)
- - enhanced UI and styling
- - implement react router to dynamically render to different react routes
- - add update and delete functionality to sql databases and front end
- - link to the actual hexagram images
  - autogenerate the hexagram that you want
- - 
+ - algorithms to generate hexagrams (yarrow algorithm)
+ - link to the actual hexagram images --> this could require additional tables in the database
+ - scrape a website to get the text that is associated with the hexagram
+ - add a picture of the I Ching hexagrams to the middle of the page
+ - find api online that you can use to pull relevant information
+ - update the text to be a cool font using google fonts
 
  extra stretch goals:
+ - cookies/session authentication
+ - enhanced UI and styling
  - OAuth authorization
  - chrome extension for quick reading w/o storage
  - incorporate advanced data structures
+ - implement react router to dynamically render to different react routes
+ - add update functionality to sql databases and front end
 
 //
 
@@ -45,7 +48,9 @@ completed
 9. include ability to get data from the database by clicking button on front end
 10. set up react functionality in a single file to print the log of past readings
 11. modularized my react code to generate the sections with past readings
-12. 
+12. implemented the ability to delete and refresh the UI upon deleting
+13. made improvements to the UI, especially with respect to the historical log
+14. 
 
 //
 
@@ -58,3 +63,5 @@ INSERT INTO Reading (_id, FirstName, LastName, Question, Starred, Toss, Notes) V
 SELECT * FROM reading
 
 DROP TABLE Reading
+
+DELETE FROM reading WHERE _id=${id}
