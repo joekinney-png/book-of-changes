@@ -30,11 +30,21 @@ readingLogController.addReading = (req, res, next) => {
 readingLogController.viewReadings = (req, res, next) => {
   const text = `SELECT * FROM reading`;
 
-  console.log('button clicked')
-
   db.query(text)
     .then((data) => {
       res.locals.readings = data.rows;
+      next();
+    })
+    .catch((err) => console.log(err));
+};
+
+readingLogController.deleteReading = (req, res, next) => {
+  const id = req.query.id;
+  const text = `DELETE FROM reading WHERE _id=${id}`;
+
+  db.query(text)
+    .then((data) => {
+      res.locals.deletedReading = data.rows;
       next();
     })
     .catch((err) => console.log(err));

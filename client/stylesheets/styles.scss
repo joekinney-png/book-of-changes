@@ -7,18 +7,46 @@ h3 {
 }
 
 body {
-  background-color: rgb(166, 166, 245);
-}
-
-#book {
-  width: 400px;
-  color: blue;
+  background-color: rgb(175, 175, 241);
 }
 
 .pastReading {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   color:  rgb(65, 8, 65);
   margin: 5%;
+  padding: 10px;
+  width:95%;
+  margin: 15px auto;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+  border: solid 1px rgb(43, 4, 43);
+  border-radius: 5px;
+  box-shadow: 5px 6px 8px 4px rgba(93, 83, 99, 0.62);
+}
+
+.identification {
+  border: solid 1px rgb(99, 86, 99);
+  padding: 2em;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.readingDetails {
+
+}
+
+.thoughts {
+
+}
+
+.updateDelete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.question {
+  
 }

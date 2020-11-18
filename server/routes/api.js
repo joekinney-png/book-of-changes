@@ -12,4 +12,8 @@ router.post("/add", readingLogController.addReading, (req, res) => {
   res.redirect("/");
 });
 
+router.get("/delete?:id", readingLogController.deleteReading, (req, res) => {
+  res.status(200).json(res.locals.deletedReading);
+});
+
 module.exports = router;

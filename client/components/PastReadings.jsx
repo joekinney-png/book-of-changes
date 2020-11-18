@@ -27,7 +27,6 @@ class PastReadings extends Component {
       const logEntries = [];
   
       for (let i = 0; i < this.state.readingLog.length; i++) {
-        console.log(this.state.readingLog[i]['_id'])
         logEntries.push(<PastReading
                            key={`Entries-${i}`}
                            id={this.state.readingLog[i]['_id']}
@@ -37,6 +36,8 @@ class PastReadings extends Component {
                            starred={this.state.readingLog[i]['starred']}
                            toss={this.state.readingLog[i]['toss']}
                            notes={this.state.readingLog[i]['notes']}
+                           deleteReading={this.deleteReading}
+                           viewPastReadings={this.viewPastReadings}
                         />);
       }
   

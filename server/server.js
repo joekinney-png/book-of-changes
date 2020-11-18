@@ -7,6 +7,7 @@ const PORT = 3000;
 
 const apiRouter = require("./routes/api");
 
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api", apiRouter);
