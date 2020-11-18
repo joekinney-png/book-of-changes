@@ -5,23 +5,20 @@
      <link rel="stylesheet" type="text/css" href="./stylesheets/styles.scss">
  </head>
  <body>
-     <h1>Book of Changes</h1>
-     <h4>Record a new reading:</h4>
-     <form id="readingInfo" method="POST" action='/api/add'>
-       <input name="_id" type="number" placeholder="ID"></input>
-       <input name="firstName" type="string" placeholder="First name"></input>
-       <input name="lastName" type="string" placeholder="Last name"></input>
-       <input name="question" type="string" placeholder="Question"></input>
-       <input name="starred" type="number" placeholder="Star?"></input>
-       <input name="toss" type="number" placeholder="Present hexagram"></input>
-       <input name="notes" type="string" placeholder="Notes"></input>
-       <input type='submit' value="Submit">
-     </form>
-     <div id="content"></div>
+    <h1>Book of Changes</h1>
+    <h3>Record a new reading here:</h3>
+    <form id="readingInfo" method="POST" action='/api/add'>
+      <input name="_id" type="number" placeholder="ID"></input>
+      <input name="firstName" type="string" placeholder="First name"></input>
+      <input name="lastName" type="string" placeholder="Last name"></input>
+      <input name="question" type="string" placeholder="Question"></input>
+      <input name="starred" type="number" placeholder="Star?"></input>
+      <input name="toss" type="number" placeholder="Present hexagram"></input>
+      <input name="notes" type="string" placeholder="Notes"></input>
+      <input type='submit' value="Submit">
+    </form>
+    <div id="content"></div>
      <script src='Book.jsx'></script>
      <script src="build/bundle.js"></script>
  </body>
 </html>
-
-<!-- <button method="POST" action='/api/view'>View past readings</button>
-<div id="Readings"></div> -->

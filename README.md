@@ -10,14 +10,20 @@ the I Ching is a long-loved (has been used and refined over 4,000 years) tool of
 this open source book-of-changes application allows registered users to quickly and easily pose a question and instantaneously randomly generate the present and future hexagram responses; the application logs prior divinations and includes space to record notes or additional thought about the divination; additionally, the application allows includes links to further information about the hexagrams themselves, a pleasant user interface and user experience and the ability to star / highlight divinations that hold particular significance
 
 core features:
- - webpack 
+ - webpack
  - react frontend user interface
+ - node / express server to serve requests from the client and query the database
  - SQL database storage
  
 stretch goals:
  - cookies/session authentication
  - algorithms to generate hexagrams (yarrow algorithm)
  - enhanced UI and styling
+ - implement react router to dynamically render to different react routes
+ - add update and delete functionality to sql databases and front end
+ - link to the actual hexagram images
+ - autogenerate the hexagram that you want
+ - 
 
  extra stretch goals:
  - OAuth authorization
@@ -38,12 +44,8 @@ completed
 8. set up functionality to send a post request to add new readings to the server (body-parser)
 9. include ability to get data from the database by clicking button on front end
 10. set up react functionality in a single file to print the log of past readings
-
-//
-
-optional
-
-1. 
+11. modularized my react code to generate the sections with past readings
+12. 
 
 //
 

@@ -14,3 +14,11 @@ body {
   width: 400px;
   color: blue;
 }
+
+.pastReading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color:  rgb(65, 8, 65);
+  margin: 5%;
+}
