@@ -44,7 +44,8 @@ readingLogController.addReading = (req, res, next) => {
   // console.log(res.locals.futureHexObj.hexagram);
   // console.log(res.locals.futureHexObj.description);
 
-  const { firstName, lastName, question } = req.body;
+  const { firstName, lastName, question } = res.locals.body;
+  console.log(firstName);
   const value = [
     res.locals.id,
     String(firstName),

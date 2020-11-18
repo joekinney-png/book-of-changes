@@ -18,11 +18,12 @@ class PastReadings extends Component {
         .then((res) => res.json())
         .then((readingLog) => {
         if (!Array.isArray(readingLog)) readingLog = [];
+        console.log(readingLog);
           return this.setState({ readingLog });
       })
       .catch(err => console.log('PastReadings.viewPastReadings: get readings: ERROR: ', err));
     }
-  
+
     render() {
       const logEntries = [];
   
@@ -34,9 +35,13 @@ class PastReadings extends Component {
                            lastName={this.state.readingLog[i]['lastname']}
                            question={this.state.readingLog[i]['question']}
                           //  starred={this.state.readingLog[i]['starred']}
-                           presenthexstr={this.state.readingLog[i]['presenthexstr']}
+                           presenthexdef={this.state.readingLog[i]['presenthexdef']}
+                           presenthex={this.state.readingLog[i]['presenthex']}
+                           presenthexdescrip={this.state.readingLog[i]['presenthexdescrip']}
                            changinglinesstr={this.state.readingLog[i]['changinglines']}
-                           futurehexstr={this.state.readingLog[i]['futurehexstr']}
+                           futurehexdef={this.state.readingLog[i]['futurehexdef']}
+                           futurehex={this.state.readingLog[i]['futurehex']}
+                           futurehexdescrip={this.state.readingLog[i]['futurehexdescrip']}
                           //  notes={this.state.readingLog[i]['notes']}
                            viewPastReadings={this.viewPastReadings}
                         />);

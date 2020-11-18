@@ -52,7 +52,10 @@ completed
 13. made improvements to the UI, especially with respect to the historical log
 14. made id generation automatic, fixed the delete so that it would still render
 15. added png image processing to the webpack
-16. 
+16. added functionality to derive present hexagram, changing lines and future hexagram
+17. able to pull the relevant hexagram and changing line information and store in database
+18. calls from the client pull all of the relevant information out of the database and display on screen
+19. 
 
 //
 

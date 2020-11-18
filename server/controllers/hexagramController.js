@@ -57,6 +57,8 @@ hexagramController.newPresentHexagram = (req, res, next) => {
   res.locals.changingLines = changingLines;
   res.locals.changingLinesStr = changingLinesStr;
 
+  res.locals.body = req.body;
+  
   next();
 }
 

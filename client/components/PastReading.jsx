@@ -29,13 +29,15 @@ class PastReading extends Component {
           </p>
           <div className="readingDetails">
             <p className="question">
-            <span>Question posed: {this.props.question}</span>
+            <span>{this.props.question}</span>
             </p>
-            <span>Present Hexagram: {this.props.presenthexstr}</span>
-            <br/>
-            <span>Changing Lines: {this.props.changinglinesstr}</span>
-            <br/>
-            <span>Future Hexagram: {this.props.futurehexstr}</span>
+            <div className="result">
+              <span>Present Hexagram: {this.props.presenthexdef} {this.props.presenthex} {this.props.presenthexdescrip}</span>
+              <span></span>
+              <span>Changing Lines: {this.props.changinglinesstr}</span>
+              <span></span>
+              <span>Future Hexagram: {this.props.futurehexdef} {this.props.futurehex} {this.props.futurehexdescrip}</span>
+            </div>
           </div>
           <p className="thoughts">
             <span>Notes: [to come]</span>
