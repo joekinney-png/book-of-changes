@@ -7,6 +7,7 @@ readingLogController.viewReadings = (req, res, next) => {
 
   db.query(text)
     .then((data) => {
+      // sort readings by reading id when they are pulled
       data.rows.sort((a, b) => a["_id"] - b["_id"]);
       res.locals.readings = data.rows;
       next();

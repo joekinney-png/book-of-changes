@@ -10,17 +10,24 @@ router.get("/view", readingLogController.viewReadings, (req, res) => {
   res.status(200).json(res.locals.readings);
 });
 
-router.post("/add",
+router.post(
+  "/add",
   hexagramController.newPresentHexagram,
   readingLogController.pullId,
   readingLogController.addReading,
   (req, res) => {
     res.redirect("/");
-});
+  }
+);
 
-router.get("/put", notesController.updateNote, (req, res) => {
-  res.redirect("/");
-});
+router.get(
+  "/put",
+  // notesController.getNote,
+  notesController.updateNote,
+  (req, res) => {
+    res.redirect("/");
+  }
+);
 
 router.get("/delete?:id", readingLogController.deleteReading, (req, res) => {
   res.status(200).json(res.locals.deletedReading);
