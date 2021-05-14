@@ -7,12 +7,12 @@ readingLogController.viewReadings = (req, res, next) => {
 
   db.query(text)
     .then((data) => {
+      data.rows.sort((a, b) => a["_id"] - b["_id"]);
       res.locals.readings = data.rows;
       next();
     })
     .catch((err) => console.log(err));
 };
-
 
 readingLogController.pullId = (req, res, next) => {
   let idArr = [];
@@ -21,21 +21,24 @@ readingLogController.pullId = (req, res, next) => {
   db.query(idPull)
     .then((data) => {
       for (let i = 0; i < data.rows.length; i++) {
-        idArr.push(data.rows[i]['_id']);
+        idArr.push(data.rows[i]["_id"]);
       }
       if (Math.max(...idArr) + 1 > 0) {
         res.locals.id = Math.max(...idArr) + 1;
       } else {
         res.locals.id = 1;
-      };
+      }
       next();
     })
     .catch((err) => console.log(err));
-}
+};
 
 readingLogController.addReading = (req, res, next) => {
-  const changingLineComb = ( res.locals.changingLineText.text.reduce((acc, curr) => (acc += curr + "\n"), '') ||
-    "There are no changing lines");
+  const changingLineComb =
+    res.locals.changingLineText.text.reduce(
+      (acc, curr) => (acc += curr + "\n"),
+      ""
+    ) || "There are no changing lines";
 
   const { firstName, lastName, question } = res.locals.body;
   const thoughts = "[to come]";
