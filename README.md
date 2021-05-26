@@ -9,55 +9,6 @@ the I Ching is a long-loved (has been used and refined over 4,000 years) tool of
 
 this open source book-of-changes application allows registered users to quickly and easily pose a question and instantaneously randomly generate the present and future hexagram responses; the application logs prior divinations and includes space to record notes or additional thought about the divination; additionally, the application allows includes links to further information about the hexagrams themselves, a pleasant user interface and user experience and the ability to star / highlight divinations that hold particular significance
 
-core features:
- - webpack
- - react frontend user interface
- - node / express server to serve requests from the client and query the database
- - SQL database storage
- 
-stretch goals:
- - autogenerate the hexagram that you want
- - algorithms to generate hexagrams (yarrow algorithm)
- - link to the actual hexagram images --> this could require additional tables in the database
- - scrape a website to get the text that is associated with the hexagram
- - add a picture of the I Ching hexagrams to the middle of the page
- - find api online that you can use to pull relevant information
- - update the text to be a cool font using google fonts
-
- extra stretch goals:
- - cookies/session authentication
- - enhanced UI and styling
- - OAuth authorization
- - chrome extension for quick reading w/o storage
- - incorporate advanced data structures
- - implement react router to dynamically render to different react routes
- - add update functionality to sql databases and front end
-
-//
-
-completed
-
-1. first draft of README
-2. created build, client, server and docs files
-3. basic serve which serves an index.html page to the local port
-4. set up ESLint and Prettier, installed React, React DOM
-5. create and configure webpack file, download babel
-6. downloaded postgresql, configured SQL and added first table to record readings
-7. set up stylesheets with webpack, connected to React and HTML
-8. set up functionality to send a post request to add new readings to the server (body-parser)
-9. include ability to get data from the database by clicking button on front end
-10. set up react functionality in a single file to print the log of past readings
-11. modularized my react code to generate the sections with past readings
-12. implemented the ability to delete and refresh the UI upon deleting
-13. made improvements to the UI, especially with respect to the historical log
-14. made id generation automatic, fixed the delete so that it would still render
-15. added png image processing to the webpack
-16. added functionality to derive present hexagram, changing lines and future hexagram
-17. able to pull the relevant hexagram and changing line information and store in database
-18. calls from the client pull all of the relevant information out of the database and display on screen
-19. cleaned up the code, deleting extra lines, etc
-20. 
-
 //
 
 SQL queries
